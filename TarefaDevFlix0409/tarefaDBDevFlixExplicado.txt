@@ -1,0 +1,18 @@
+Explicando principais decisões do exercício "DevFlix"
+
+Houve a generalização das funções assumidas numa produção e seus gêneros, por serem diversos e representarem uma mudança (embora significativa) não digna de separação. 
+Os profissionais por exemplo, podem ser diretores, autores, atores... até dubladores e editores.
+Já os gêneros também são diversos e podem muitas vezes até coexistir na mesma produção, podendo ao mesmo tempo ser ação e aventura, e vivendo separadamente.
+
+Em contra partida, o TIPO de produção (serie, filme e animação) alteram seu fundamento e tem caracteristicas vastamente distintas, e simultaneamente não são tantas.
+Por isso, vale a pena distinguir elas em sua individualidade através de uma tabela para melhor visibilidade e reutilização.
+
+A respeito das relações:
+Um usuario pode existir sem uma assinatura, mas uma assinatura depende de um usuário
+Um usuario pode ter no máximo uma assinatura por vez (considerando que aumentar o plano carrega a mesma assinatura), e uma assinatura pertence a um usuário por vez (embora englobe possivelmente vários perfis do mesmo)
+Uma assinatura pode conter vários preços (dos diversos planos), mas um preço pertence a apenas uma assinatura por vez (considerando que seria ineficaz colocar um plano superior ou inferior com o mesmo preço).
+Um usuário pode consumir várias produções, e uma produção pode ser consumida por diversos usuários (N:N então a tabela é criada).
+Uma produção pode existir antes de um filme / série / desenho, mas um filme / série / desenho não existe sem uma produção.
+Uma produção pertence somente a um filme / série / desenho, e um filme / série / desenho tem somente uma produção.
+Uma produção pode possuir diversos gêneros, e um gênero pode englobar diversas produções.
+Uma produção tem diversos profissionais, e os profissionais pertencem a diversas produções.
